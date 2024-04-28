@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Record Clicks</title>
+</head>
+<body>
+    <a href="#" id="clickMe">Click Me</a>
+    <script>
+        document.getElementById('clickMe').addEventListener('click', function(event) {
+            // Record the current page URL when the link is clicked
+            var clickedFrom = window.location.href;
+            
+            // You can send this information to your server or handle it as needed
+            console.log('Clicked from:', clickedFrom);
+        });
+    </script>
+</body>
+</html>
