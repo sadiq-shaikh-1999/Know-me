@@ -12,8 +12,14 @@
             // Record the current page URL when the link is clicked
             var clickedFrom = window.location.href;
             
-            // You can send this information to your server or handle it as needed
-            console.log('Clicked from:', clickedFrom);
+            // Call the Google Apps Script function to save the URL
+            google.script.run.recordClick(clickedFrom);
+
+            // You can also notify the user that the click is recorded, if needed
+            alert('Click recorded!');
+
+            // Prevent the default behavior of the link
+            event.preventDefault();
         });
     </script>
 </body>
